@@ -20,5 +20,16 @@ public class Dwarf extends Player {
         this.armor = armor;
     }
 
+
+    public void defend(Player opponent) {
+        Attributes opponentWeapon = opponent.getAttribute();
+        Attributes armor = (Attributes.ANGULARHELMET);
+        int defendingPoints = getHealthPoints() + armor.getBaseAffect();
+        int result = defendingPoints + opponentWeapon.getBaseAffect();
+        setHealthPoints(result);
+
+    }
+
+
 }
 

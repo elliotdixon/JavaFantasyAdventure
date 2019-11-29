@@ -34,4 +34,16 @@ public abstract class Player {
         this.attribute = attribute;
     }
 
+    public void attack(Player opponent) {
+        int attackOutCome = opponent.getHealthPoints() + this.attribute.getBaseAffect();
+        opponent.setHealthPoints(attackOutCome);
+    }
+
+    public void defend(Player opponent) {
+        Attributes opponentAttr = opponent.getAttribute();
+        this.healthPoints += opponentAttr.getBaseAffect();
+    }
+
 }
+
+

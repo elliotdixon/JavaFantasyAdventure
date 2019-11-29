@@ -6,18 +6,18 @@ public enum Attributes {
 
     //Weapons
 
-    SWORD(6),
-    AXE(7),
-    CLUB(4),
-    WAND(1),
-    THEAXEOFJAVASCRIPTEVANGELISM(7),
-    HUNGARIANBOW(420),
-    CLAYMORE(10),
-    BOOK(1),
+    SWORD(-6),
+    AXE(-7),
+    CLUB(-4),
+    WAND(-1),
+    THEAXEOFJAVASCRIPTEVANGELISM(-7),
+    HUNGARIANBOW(-420),
+    CLAYMORE(-10),
+    BOOK(-1),
 
     //HEALING
 
-    ZSOLTHAND(10),
+    ZSOLTHAND(5),
     FREEDRINKS(5),
     QUIZHOMEWORK(100),
     FIVEMINUTEBREAK(5),
@@ -44,10 +44,14 @@ public enum Attributes {
 
     ANYQUESTIONS(2);
 
-    private final int value;
+    private final int baseAffectOnHP;
 
-    Attributes(int value) {
-        this.value = value;
+    Attributes(int baseAffectOnHP) {
+        this.baseAffectOnHP = baseAffectOnHP;
+    }
+
+    public int getBaseAffect() {
+        return baseAffectOnHP;
     }
 
 }
